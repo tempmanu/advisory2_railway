@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Soil Analysis | Smart Crop Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="lang-en">
+
+<!-- ════ LOADING OVERLAY ════ -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loader-ring"><div class="loader-leaf">🌱</div></div>
+  <div class="loading-text" data-i18n="loadingText">Analyzing Soil…</div>
+  <div class="loading-sub"  data-i18n="loadingSub">Please wait a moment</div>
+  <div class="loading-dots"><span></span><span></span><span></span></div>
+</div>
+
+<!-- ════ ERROR TOAST ════ -->
+<div class="toast" id="errorToast">
+  <span class="toast-icon">⚠️</span>
+  <span id="toastMsg"></span>
+</div>
+
+<!-- ════ TOP BAR ════ -->
+<header class="top-bar">
+  <a href="/" class="top-brand">
+    <div class="top-logo">🌾</div>
+    <div>
+      <div class="top-title" data-i18n="appName">Smart Crop Advisory</div>
+      <div class="top-sub"   data-i18n="appSub">AI-Powered Farming</div>
+    </div>
+  </a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn"        id="btnTe" onclick="setLang('te')">తె</button>
+  </div>
+</header>
+
+<!-- ════ MAIN ════ -->
+<main class="app-body">
+  <div class="page-content">
+
+    <!-- Screen Header -->
+    <div class="screen-header">
+      <div class="screen-header-icon">🧪</div>
+      <h2 data-i18n="predictTitle">Soil Analysis</h2>
+      <p data-i18n="predictSub">Fill in your soil details below</p>
+      <div class="step-dots">
+        <div class="step-dot active"></div>
+        <div class="step-dot"></div>
+        <div class="step-dot"></div>
+      </div>
+    </div>
+
+    <!-- Form Card -->
+    <div class="form-card">
+
+      <!-- Soil Type -->
+      <div class="field-group">
+        <label class="field-label">
+          <div class="field-label-icon">🏔️</div>
+          <span data-i18n="labelSoil">Soil Type</span>
+        </label>
+        <div class="select-wrap">
+          <select id="soilType" onchange="onFieldChange()">
+            <option value=""       data-i18n="soilPlaceholder">-- Select Soil Type --</option>
+            <option value="Black"  data-i18n="soilBlack">Black Soil</option>
+            <option value="Red"    data-i18n="soilRed">Red Soil</option>
+            <option value="Sandy"  data-i18n="soilSandy">Sandy Soil</option>
+            <option value="Clay"   data-i18n="soilClay">Clay Soil</option>
+            <option value="Loamy"  data-i18n="soilLoamy">Loamy Soil</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Crop -->
+      <div class="field-group">
+        <label class="field-label">
+          <div class="field-label-icon">🌾</div>
+          <span data-i18n="labelCrop">Crop Name</span>
+        </label>
+        <div class="select-wrap">
+          <select id="cropName" onchange="onFieldChange()">
+            <option value=""       data-i18n="cropPlaceholder">-- Select Crop --</option>
+            <option value="Rice"   data-i18n="cropRice">Rice (వరి)</option>
+            <option value="Wheat"  data-i18n="cropWheat">Wheat (గోధుమ)</option>
+            <option value="Cotton" data-i18n="cropCotton">Cotton (పత్తి)</option>
+            <option value="Maize"  data-i18n="cropMaize">Maize (మొక్కజొన్న)</option>
+            <option value="Other"  data-i18n="cropOther">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- pH Slider -->
+      <div class="field-group">
+        <label class="field-label">
+          <div class="field-label-icon">⚗️</div>
+          <span data-i18n="labelPH">Soil pH Value</span>
+        </label>
+        <div class="ph-row">
+          <div class="ph-value-circle neutral" id="phCircle">
+            <div class="ph-number" id="phDisplay">6.5</div>
+          </div>
+          <div class="ph-right">
+            <div class="ph-status-badge neutral" id="phBadge">Neutral ✓</div>
+            <div class="slider-track">
+              <input type="range" id="phSlider" min="4" max="9" step="0.1" value="6.5" oninput="updatePH(this.value)">
+            </div>
+            <div class="ph-ticks">
+              <span>4.0</span><span>5.0</span><span>6.0</span><span>7.0</span><span>8.0</span><span>9.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Water Availability -->
+      <div class="field-group">
+        <label class="field-label">
+          <div class="field-label-icon">💧</div>
+          <span data-i18n="labelWater">Water Availability</span>
+        </label>
+        <div class="chip-group">
+          <button class="chip selected" id="chip-irrigated" onclick="selectWater('Irrigated')">
+            <span class="chip-icon">🚿</span>
+            <span data-i18n="waterIrr">Irrigated</span>
+          </button>
+          <button class="chip" id="chip-rainfed" onclick="selectWater('Rainfed')">
+            <span class="chip-icon">🌧️</span>
+            <span data-i18n="waterRain">Rainfed</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+        <span>🔬</span>
+        <span data-i18n="btnAnalyze">Analyze Soil</span>
+        <span style="margin-left:4px; font-size:16px;">→</span>
+      </button>
+    </div>
+
+  </div>
+</main>
+
+<!-- ════ BOTTOM NAV ════ -->
+<nav class="bottom-nav">
+  <a href="/"        class="nav-item">
+    <div class="nav-icon-wrap">🏠</div>
+    <span data-i18n="navHome">Home</span>
+  </a>
+  <a href="/soil"    class="nav-item active">
+    <div class="nav-icon-wrap">🔬</div>
+    <span data-i18n="navPredict">Predict</span>
+  </a>
+  <a href="/weather" class="nav-item">
+    <div class="nav-icon-wrap">🌤️</div>
+    <span data-i18n="navWeather">Weather</span>
+  </a>
+  <a href="/about"   class="nav-item">
+    <div class="nav-icon-wrap">ℹ️</div>
+    <span data-i18n="navAbout">About</span>
+  </a>
+</nav>
+
+<script src="/script.js"></script>
+</body>
+</html>

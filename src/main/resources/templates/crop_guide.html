@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Crop Guide | Smart Crop Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="lang-en">
+
+<!-- ════ TOP BAR ════ -->
+<header class="top-bar">
+  <a href="/" class="top-brand">
+    <div class="top-logo">🌾</div>
+    <div>
+      <div class="top-title" data-i18n="appName">Smart Crop Advisory</div>
+      <div class="top-sub"   data-i18n="appSub">AI-Powered Farming</div>
+    </div>
+  </a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn"        id="btnTe" onclick="setLang('te')">తె</button>
+  </div>
+</header>
+
+<!-- ════ MAIN ════ -->
+<main class="app-body">
+  <div class="page-content">
+
+    <div class="generic-header screen-header">
+      <div class="screen-header-icon">🌾</div>
+      <h2>Crop Guide</h2>
+      <p>Sowing seasons &amp; best practices for Telangana</p>
+    </div>
+
+    <div class="info-cards">
+
+      <div class="info-card">
+        <h3>🌾 Rice (వరి)</h3>
+        <p>Kharif crop — sown June to July, harvested October to November. Requires clayey or loamy soil with good water retention. Ideal pH: 5.5–7.0.</p>
+        <div class="info-list">
+          <div class="info-list-item">🗓️ Sowing season: June – July (Kharif)</div>
+          <div class="info-list-item">💧 Water requirement: High — needs standing water during tillering</div>
+          <div class="info-list-item">🌡️ Temperature: 20°C – 38°C optimal</div>
+          <div class="info-list-item">🏆 Best varieties: Sona Masuri, BPT-5204, MTU-1010</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🌿 Cotton (పత్తి)</h3>
+        <p>Kharif crop suited for black soil in Telangana. Sow May to June and harvest October to January. Requires deep, well-drained black cotton soil.</p>
+        <div class="info-list">
+          <div class="info-list-item">🗓️ Sowing season: May – June (Kharif)</div>
+          <div class="info-list-item">💧 Water requirement: Medium — drought-tolerant once established</div>
+          <div class="info-list-item">🌡️ Temperature: 21°C – 35°C optimal</div>
+          <div class="info-list-item">🏆 Best varieties: Bt Cotton hybrids, NHH-44</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🌽 Maize (మొక్కజొన్న)</h3>
+        <p>Both Kharif and Rabi crop. Well-drained loamy soil preferred. Grows well in Telangana's climate. Short duration of 90–120 days.</p>
+        <div class="info-list">
+          <div class="info-list-item">🗓️ Sowing season: June – July &amp; Oct – Nov</div>
+          <div class="info-list-item">💧 Water requirement: Medium — sensitive to waterlogging</div>
+          <div class="info-list-item">🌡️ Temperature: 18°C – 32°C optimal</div>
+          <div class="info-list-item">🏆 Best varieties: DEKALB 9141, Pioneer 3396</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🌾 Wheat (గోధుమ)</h3>
+        <p>Rabi crop grown in cooler months. Suited for loamy to clay-loam soils. Ideal for irrigated conditions in Telangana's northern districts.</p>
+        <div class="info-list">
+          <div class="info-list-item">🗓️ Sowing season: November – December (Rabi)</div>
+          <div class="info-list-item">💧 Water requirement: 4–5 irrigations during season</div>
+          <div class="info-list-item">🌡️ Temperature: 10°C – 25°C optimal</div>
+          <div class="info-list-item">🏆 Best varieties: HD-2781, GW-322, K-307</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- ════ BOTTOM NAV ════ -->
+<nav class="bottom-nav">
+  <a href="/"        class="nav-item">
+    <div class="nav-icon-wrap">🏠</div>
+    <span data-i18n="navHome">Home</span>
+  </a>
+  <a href="/soil"    class="nav-item">
+    <div class="nav-icon-wrap">🔬</div>
+    <span data-i18n="navPredict">Predict</span>
+  </a>
+  <a href="/weather" class="nav-item">
+    <div class="nav-icon-wrap">🌤️</div>
+    <span data-i18n="navWeather">Weather</span>
+  </a>
+  <a href="/about"   class="nav-item">
+    <div class="nav-icon-wrap">ℹ️</div>
+    <span data-i18n="navAbout">About</span>
+  </a>
+</nav>
+
+<script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Rainfall | Smart Crop Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="lang-en">
+
+<!-- ════ TOP BAR ════ -->
+<header class="top-bar">
+  <a href="/" class="top-brand">
+    <div class="top-logo">🌾</div>
+    <div>
+      <div class="top-title" data-i18n="appName">Smart Crop Advisory</div>
+      <div class="top-sub"   data-i18n="appSub">AI-Powered Farming</div>
+    </div>
+  </a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn"        id="btnTe" onclick="setLang('te')">తె</button>
+  </div>
+</header>
+
+<!-- ════ MAIN ════ -->
+<main class="app-body">
+  <div class="page-content">
+
+    <div class="generic-header screen-header" style="background: linear-gradient(155deg, #0f1f3a, #1a3a6e, #1d6fa4);">
+      <div class="screen-header-icon">🌧️</div>
+      <h2>Rainfall Data</h2>
+      <p>Monthly rainfall patterns for Telangana</p>
+    </div>
+
+    <div class="info-cards">
+
+      <div class="info-card">
+        <h3>📊 Annual Rainfall Overview</h3>
+        <p>Telangana receives average annual rainfall of 900–1100 mm. About 75% of this falls during the Southwest Monsoon (June–September).</p>
+        <div class="info-list">
+          <div class="info-list-item">🌦️ Pre-Monsoon (Mar–May): ~50–80 mm</div>
+          <div class="info-list-item">🌧️ SW Monsoon (Jun–Sep): ~700–850 mm (main season)</div>
+          <div class="info-list-item">🌦️ NE Monsoon (Oct–Nov): ~100–150 mm</div>
+          <div class="info-list-item">☀️ Winter/Summer (Dec–Feb): ~20–40 mm</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🗺️ Rainfall by Region</h3>
+        <p>Rainfall distribution varies significantly across Telangana's districts. Plan crop selection based on your region's typical rainfall.</p>
+        <div class="info-list">
+          <div class="info-list-item">🟢 High Rainfall (>1100mm): Adilabad, Khammam, Warangal</div>
+          <div class="info-list-item">🟡 Medium (700–1100mm): Hyderabad, Nalgonda, Medak</div>
+          <div class="info-list-item">🔴 Low (&lt;700mm): Mahabubnagar, Ranga Reddy</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🌱 Rainfall-Based Crop Planning</h3>
+        <p>Choose crops matching your area's rainfall to reduce water stress and improve yields without excessive irrigation.</p>
+        <div class="info-list">
+          <div class="info-list-item">💧 High Rainfall areas: Ideal for Rice, Sugarcane, Banana</div>
+          <div class="info-list-item">🌿 Medium Rainfall: Cotton, Maize, Soybean, Sunflower</div>
+          <div class="info-list-item">🌾 Low Rainfall / Rainfed: Sorghum, Millets, Pulses</div>
+          <div class="info-list-item">💡 For accuracy, use our Soil Analysis tool for recommendations</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>⚠️ Rainfall Advisory Tips</h3>
+        <div class="info-list">
+          <div class="info-list-item">🌧️ Avoid fertilizer application 24 hrs before expected heavy rain</div>
+          <div class="info-list-item">💊 Do not spray pesticides if rain forecast within 4–6 hours</div>
+          <div class="info-list-item">🚜 Ensure proper field drainage to prevent waterlogging</div>
+          <div class="info-list-item">📦 Store harvested produce before monsoon onset</div>
+          <div class="info-list-item">🌱 Use rain gauges to track actual field-level rainfall</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- ════ BOTTOM NAV ════ -->
+<nav class="bottom-nav">
+  <a href="/"        class="nav-item">
+    <div class="nav-icon-wrap">🏠</div>
+    <span data-i18n="navHome">Home</span>
+  </a>
+  <a href="/soil"    class="nav-item">
+    <div class="nav-icon-wrap">🔬</div>
+    <span data-i18n="navPredict">Predict</span>
+  </a>
+  <a href="/weather" class="nav-item active">
+    <div class="nav-icon-wrap">🌤️</div>
+    <span data-i18n="navWeather">Weather</span>
+  </a>
+  <a href="/about"   class="nav-item">
+    <div class="nav-icon-wrap">ℹ️</div>
+    <span data-i18n="navAbout">About</span>
+  </a>
+</nav>
+
+<script src="/script.js"></script>
+</body>
+</html>

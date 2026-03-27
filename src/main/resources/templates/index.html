@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Smart Crop Advisory | స్మార్ట్ క్రాప్ అడ్వైజరీ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="lang-en">
+
+<!-- ════ LOADING OVERLAY ════ -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loader-ring"><div class="loader-leaf">🌱</div></div>
+  <div class="loading-text" data-i18n="loadingText">Analyzing Soil…</div>
+  <div class="loading-sub"  data-i18n="loadingSub">Please wait a moment</div>
+  <div class="loading-dots"><span></span><span></span><span></span></div>
+</div>
+
+<!-- ════ ERROR TOAST ════ -->
+<div class="toast" id="errorToast">
+  <span class="toast-icon">⚠️</span>
+  <span id="toastMsg"></span>
+</div>
+
+<!-- ════ TOP BAR ════ -->
+<header class="top-bar">
+  <a href="/" class="top-brand">
+    <div class="top-logo">🌾</div>
+    <div>
+      <div class="top-title" data-i18n="appName">Smart Crop Advisory</div>
+      <div class="top-sub"   data-i18n="appSub">AI-Powered Farming</div>
+    </div>
+  </a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn"        id="btnTe" onclick="setLang('te')">తె</button>
+  </div>
+</header>
+
+<!-- ════ MAIN ════ -->
+<main class="app-body">
+  <div class="page-content">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <div class="badge-dot"></div>
+          <span data-i18n="heroBadge">AI Powered</span>
+        </div>
+        <h1 class="hero-heading">
+          <span data-i18n="heroLine1">Smart Advisory</span>
+          <em data-i18n="heroLine2">for Better Harvests</em>
+        </h1>
+        <p class="hero-sub" data-i18n="heroSub">Get personalized fertilizer &amp; crop recommendations based on your soil conditions.</p>
+        <a href="/soil" class="hero-cta">
+          <span data-i18n="ctaStart">Start Advisory</span>
+          <div class="cta-arrow">→</div>
+        </a>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">5+</div>
+            <div class="hero-stat-label" data-i18n="statCrops">Crops</div>
+          </div>
+          <div class="hero-stat-div"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">AI</div>
+            <div class="hero-stat-label" data-i18n="statPowered">Powered</div>
+          </div>
+          <div class="hero-stat-div"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">తెలుగు</div>
+            <div class="hero-stat-label" data-i18n="statLang">Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weather Float -->
+    <div class="weather-float">
+      <div class="wf-left">
+        <div class="wf-icon-wrap">⛅</div>
+        <div>
+          <div class="wf-label" data-i18n="weatherLabel">Current Weather</div>
+          <div class="wf-temp">32°C</div>
+        </div>
+      </div>
+      <div class="wf-badge" data-i18n="weatherCond">Partly Cloudy</div>
+    </div>
+
+    <!-- Features -->
+    <div class="section-head">
+      <div class="section-title" data-i18n="featTitle">Features</div>
+    </div>
+
+    <div class="features-grid">
+      <a href="/soil"     class="feat-card">
+        <div class="feat-icon-wrap feat-icon-green">🧪</div>
+        <div class="feat-label" data-i18n="feat1">Soil Analysis</div>
+      </a>
+      <a href="/weather"  class="feat-card">
+        <div class="feat-icon-wrap feat-icon-blue">🌤️</div>
+        <div class="feat-label" data-i18n="feat2">Weather</div>
+      </a>
+      <a href="/about"    class="feat-card">
+        <div class="feat-icon-wrap feat-icon-purple">📚</div>
+        <div class="feat-label" data-i18n="feat3">About</div>
+      </a>
+      <a href="/crop-guide" class="feat-card">
+        <div class="feat-icon-wrap feat-icon-amber">🌾</div>
+        <div class="feat-label" data-i18n="feat4">Crop Guide</div>
+      </a>
+      <a href="/fertilizers" class="feat-card">
+        <div class="feat-icon-wrap feat-icon-red">💊</div>
+        <div class="feat-label" data-i18n="feat5">Fertilizers</div>
+      </a>
+      <a href="/rainfall"  class="feat-card">
+        <div class="feat-icon-wrap feat-icon-teal">🌧️</div>
+        <div class="feat-label" data-i18n="feat6">Rainfall</div>
+      </a>
+    </div>
+
+    <!-- Tip -->
+    <div class="tip-card">
+      <div class="tip-emoji-wrap">💡</div>
+      <div class="tip-text" data-i18n="tipText"><strong>Pro Tip:</strong> Test your soil pH before sowing. Ideal range is 6.0–7.5 for most crops. Use our advisory tool for personalized recommendations.</div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ════ BOTTOM NAV ════ -->
+<nav class="bottom-nav">
+  <a href="/"        class="nav-item active">
+    <div class="nav-icon-wrap">🏠</div>
+    <span data-i18n="navHome">Home</span>
+  </a>
+  <a href="/soil"    class="nav-item">
+    <div class="nav-icon-wrap">🔬</div>
+    <span data-i18n="navPredict">Predict</span>
+  </a>
+  <a href="/weather" class="nav-item">
+    <div class="nav-icon-wrap">🌤️</div>
+    <span data-i18n="navWeather">Weather</span>
+  </a>
+  <a href="/about"   class="nav-item">
+    <div class="nav-icon-wrap">ℹ️</div>
+    <span data-i18n="navAbout">About</span>
+  </a>
+</nav>
+
+<script src="/script.js"></script>
+</body>
+</html>

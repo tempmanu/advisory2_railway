@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>About | Smart Crop Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="lang-en">
+
+<!-- ════ TOP BAR ════ -->
+<header class="top-bar">
+  <a href="/" class="top-brand">
+    <div class="top-logo">🌾</div>
+    <div>
+      <div class="top-title" data-i18n="appName">Smart Crop Advisory</div>
+      <div class="top-sub"   data-i18n="appSub">AI-Powered Farming</div>
+    </div>
+  </a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn"        id="btnTe" onclick="setLang('te')">తె</button>
+  </div>
+</header>
+
+<!-- ════ MAIN ════ -->
+<main class="app-body">
+  <div class="page-content">
+
+    <div class="about-header">
+      <div class="about-logo-big">🌾</div>
+      <h2 data-i18n="aboutTitle">Smart Crop Advisory</h2>
+      <p  data-i18n="aboutSub">Empowering farmers with AI-based soil analysis for better yields.</p>
+    </div>
+
+    <div class="about-section">
+
+      <div class="about-card">
+        <h3><span>📋</span> <span data-i18n="aboutProject">About Project</span></h3>
+        <p data-i18n="aboutProjectText">This system uses soil data (type, pH, water availability) through a rule-based AI engine to generate personalized fertilizer recommendations. Built as part of the SOP project to support farmers in Telangana.</p>
+      </div>
+
+      <div class="about-card">
+        <h3><span>👥</span> <span data-i18n="aboutTeam">Our Team</span></h3>
+        
+        
+        <div class="about-team-row">
+
+  <div class="team-member">
+    <div class="member-avatar">👩‍💻</div>
+    <div>
+      <div class="member-name">24B61A0413 BEKKARI AKSHITHA</div>
+      <div class="member-role">Team Member</div>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <div class="member-avatar">👩‍💻</div>
+    <div>
+      <div class="member-name">24B61A0436 MAGGIDI AKSHAYA</div>
+      <div class="member-role">Team Member</div>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <div class="member-avatar">👨‍💻</div>
+    <div>
+      <div class="member-name">24B61A0445 P HARSHA VARDHAN REDDY</div>
+      <div class="member-role">Team Member</div>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <div class="member-avatar">👨‍💻</div>
+    <div>
+      <div class="member-name">24B61A0455 SANKEESA MANOJ</div>
+      <div class="member-role">Team Member</div>
+    </div>
+  </div>
+
+</div>
+
+      <div class="about-card">
+        <h3><span>⚡</span> <span data-i18n="techStack">Tech Stack</span></h3>
+        <div class="tech-chips">
+          <span class="tech-chip">Spring Boot</span>
+          <span class="tech-chip">Java</span>
+          <span class="tech-chip">MySQL</span>
+          <span class="tech-chip">HTML5</span>
+          <span class="tech-chip">CSS3</span>
+          <span class="tech-chip">JavaScript</span>
+          <span class="tech-chip">REST API</span>
+        </div>
+      </div>
+
+      <div class="version-line">Smart Crop Advisory v2.0 · SOP Project · Telangana 🌿</div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ════ BOTTOM NAV ════ -->
+<nav class="bottom-nav">
+  <a href="/"        class="nav-item">
+    <div class="nav-icon-wrap">🏠</div>
+    <span data-i18n="navHome">Home</span>
+  </a>
+  <a href="/soil"    class="nav-item">
+    <div class="nav-icon-wrap">🔬</div>
+    <span data-i18n="navPredict">Predict</span>
+  </a>
+  <a href="/weather" class="nav-item">
+    <div class="nav-icon-wrap">🌤️</div>
+    <span data-i18n="navWeather">Weather</span>
+  </a>
+  <a href="/about"   class="nav-item active">
+    <div class="nav-icon-wrap">ℹ️</div>
+    <span data-i18n="navAbout">About</span>
+  </a>
+</nav>
+
+<script src="/script.js"></script>
+</body>
+</html>

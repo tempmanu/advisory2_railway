@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Fertilizers | Smart Crop Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="lang-en">
+
+<!-- ════ TOP BAR ════ -->
+<header class="top-bar">
+  <a href="/" class="top-brand">
+    <div class="top-logo">🌾</div>
+    <div>
+      <div class="top-title" data-i18n="appName">Smart Crop Advisory</div>
+      <div class="top-sub"   data-i18n="appSub">AI-Powered Farming</div>
+    </div>
+  </a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn"        id="btnTe" onclick="setLang('te')">తె</button>
+  </div>
+</header>
+
+<!-- ════ MAIN ════ -->
+<main class="app-body">
+  <div class="page-content">
+
+    <div class="generic-header screen-header">
+      <div class="screen-header-icon">💊</div>
+      <h2>Fertilizer Guide</h2>
+      <p>Common fertilizers &amp; application tips</p>
+    </div>
+
+    <div class="info-cards">
+
+      <div class="info-card">
+        <h3>🌿 DAP — Di-Ammonium Phosphate</h3>
+        <p>A widely-used phosphorus fertilizer with 18% Nitrogen and 46% P₂O₅. Apply as a basal dose before sowing for best results.</p>
+        <div class="info-list">
+          <div class="info-list-item">📦 Composition: 18-46-0 (N-P-K)</div>
+          <div class="info-list-item">⏱️ Application: Basal dose before sowing / transplanting</div>
+          <div class="info-list-item">🌾 Best for: Rice, Wheat, Cotton, Maize</div>
+          <div class="info-list-item">📏 Dosage: 40–50 kg/acre depending on crop</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🔵 Urea (यूरिया)</h3>
+        <p>The most common nitrogen fertilizer. Contains 46% Nitrogen. Always apply in splits to prevent nutrient loss and burning.</p>
+        <div class="info-list">
+          <div class="info-list-item">📦 Composition: 46% Nitrogen</div>
+          <div class="info-list-item">⏱️ Application: Split doses — basal + top dressing</div>
+          <div class="info-list-item">🌾 Best for: All crops — primary nitrogen source</div>
+          <div class="info-list-item">⚠️ Caution: Avoid over-application — leads to lodging</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🟡 MOP — Muriate of Potash</h3>
+        <p>Main potassium fertilizer. Contains 60% K₂O. Improves drought resistance, fruit quality, and disease tolerance in crops.</p>
+        <div class="info-list">
+          <div class="info-list-item">📦 Composition: 0-0-60 (K₂O)</div>
+          <div class="info-list-item">⏱️ Application: Basal + split as top dressing</div>
+          <div class="info-list-item">🌾 Best for: Cotton, Fruits, Vegetables</div>
+          <div class="info-list-item">📏 Dosage: 20–30 kg/acre</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🔴 Zinc Sulphate (జింక్ సల్ఫేట్)</h3>
+        <p>Micronutrient fertilizer. Zinc deficiency is very common in Telangana soils, especially rice-growing areas. Spray or soil-apply for correction.</p>
+        <div class="info-list">
+          <div class="info-list-item">📦 Contains: 21% or 33% Zinc</div>
+          <div class="info-list-item">⏱️ Application: Soil — 5 kg/acre; Foliar — 0.5% solution</div>
+          <div class="info-list-item">🌾 Best for: Rice, Cotton — zinc-deficient soils</div>
+          <div class="info-list-item">💡 Signs of deficiency: Yellowing between leaf veins</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🟢 Lime / Agricultural Lime</h3>
+        <p>Used to correct acidic soils (pH below 6.0). Calcium carbonate raises soil pH and improves nutrient availability.</p>
+        <div class="info-list">
+          <div class="info-list-item">📦 Contains: Calcium Carbonate (CaCO₃)</div>
+          <div class="info-list-item">⏱️ Application: 2–3 weeks before sowing</div>
+          <div class="info-list-item">📏 Dosage: 200–400 kg/acre for acidic soils</div>
+          <div class="info-list-item">💡 Use when soil pH is below 6.0</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- ════ BOTTOM NAV ════ -->
+<nav class="bottom-nav">
+  <a href="/"        class="nav-item">
+    <div class="nav-icon-wrap">🏠</div>
+    <span data-i18n="navHome">Home</span>
+  </a>
+  <a href="/soil"    class="nav-item">
+    <div class="nav-icon-wrap">🔬</div>
+    <span data-i18n="navPredict">Predict</span>
+  </a>
+  <a href="/weather" class="nav-item">
+    <div class="nav-icon-wrap">🌤️</div>
+    <span data-i18n="navWeather">Weather</span>
+  </a>
+  <a href="/about"   class="nav-item">
+    <div class="nav-icon-wrap">ℹ️</div>
+    <span data-i18n="navAbout">About</span>
+  </a>
+</nav>
+
+<script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Weather Advisory | Smart Crop Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="lang-en">
+
+<!-- ════ TOP BAR ════ -->
+<header class="top-bar">
+  <a href="/" class="top-brand">
+    <div class="top-logo">🌾</div>
+    <div>
+      <div class="top-title" data-i18n="appName">Smart Crop Advisory</div>
+      <div class="top-sub"   data-i18n="appSub">AI-Powered Farming</div>
+    </div>
+  </a>
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn"        id="btnTe" onclick="setLang('te')">తె</button>
+  </div>
+</header>
+
+<!-- ════ MAIN ════ -->
+<main class="app-body">
+  <div class="page-content">
+
+    <div class="weather-header">
+      <h2 data-i18n="weatherTitle">Weather Advisory</h2>
+      <p  data-i18n="weatherSub">7-day forecast &amp; farming tips</p>
+    </div>
+
+    <div class="weather-main-card">
+      <div class="w-main-icon">⛅</div>
+      <div class="w-main-temp">32°C</div>
+      <div class="w-main-desc" data-i18n="wDesc">Partly Cloudy · Telangana</div>
+      <div class="w-stats">
+        <div class="w-stat">
+          <div class="w-stat-icon-wrap">💧</div>
+          <div class="w-stat-val">68%</div>
+          <div class="w-stat-label" data-i18n="wHumidity">Humidity</div>
+        </div>
+        <div class="w-stat">
+          <div class="w-stat-icon-wrap">🌬️</div>
+          <div class="w-stat-val">12 km/h</div>
+          <div class="w-stat-label" data-i18n="wWind">Wind</div>
+        </div>
+        <div class="w-stat">
+          <div class="w-stat-icon-wrap">🌧️</div>
+          <div class="w-stat-val">20%</div>
+          <div class="w-stat-label" data-i18n="wRain">Rain Chance</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head" style="padding-top:14px;">
+      <div class="section-title" data-i18n="forecastTitle">5-Day Forecast</div>
+    </div>
+
+    <div class="forecast-row">
+      <div class="forecast-card"><div class="f-day" data-i18n="day1">Mon</div><div class="f-icon">☀️</div><div class="f-temp">34°C</div></div>
+      <div class="forecast-card"><div class="f-day" data-i18n="day2">Tue</div><div class="f-icon">⛅</div><div class="f-temp">31°C</div></div>
+      <div class="forecast-card"><div class="f-day" data-i18n="day3">Wed</div><div class="f-icon">🌧️</div><div class="f-temp">27°C</div></div>
+      <div class="forecast-card"><div class="f-day" data-i18n="day4">Thu</div><div class="f-icon">⛈️</div><div class="f-temp">25°C</div></div>
+      <div class="forecast-card"><div class="f-day" data-i18n="day5">Fri</div><div class="f-icon">☀️</div><div class="f-temp">33°C</div></div>
+    </div>
+
+    <div class="crop-advisory-card">
+      <div class="cac-title">🌿 <span data-i18n="weatherAdvTitle">Farming Advisory</span></div>
+      <div class="cac-tips">
+        <div class="cac-tip"><span class="cac-tip-icon">🌧️</span><span data-i18n="wAdv1">Rain expected mid-week. Avoid spraying pesticides on Wednesday.</span></div>
+        <div class="cac-tip"><span class="cac-tip-icon">🍄</span><span data-i18n="wAdv2">High humidity — monitor crops for fungal diseases.</span></div>
+        <div class="cac-tip"><span class="cac-tip-icon">💧</span><span data-i18n="wAdv3">Monday and Friday are ideal for irrigation.</span></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ════ BOTTOM NAV ════ -->
+<nav class="bottom-nav">
+  <a href="/"        class="nav-item">
+    <div class="nav-icon-wrap">🏠</div>
+    <span data-i18n="navHome">Home</span>
+  </a>
+  <a href="/soil"    class="nav-item">
+    <div class="nav-icon-wrap">🔬</div>
+    <span data-i18n="navPredict">Predict</span>
+  </a>
+  <a href="/weather" class="nav-item active">
+    <div class="nav-icon-wrap">🌤️</div>
+    <span data-i18n="navWeather">Weather</span>
+  </a>
+  <a href="/about"   class="nav-item">
+    <div class="nav-icon-wrap">ℹ️</div>
+    <span data-i18n="navAbout">About</span>
+  </a>
+</nav>
+
+<script src="/script.js"></script>
+</body>
+</html>
